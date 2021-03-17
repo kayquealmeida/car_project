@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Car</title>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+    }
+
+    </style>
+</head>
+<body>
+  <h1 data-js="tituloPagina"></h1>
+  <form data-js="formCadastro">
+    <input type="url" name="" id="" data-js="inputImg" placeholder="Insira a URL da imagem:">
+    <input type="text" name="" id="" data-js="inputMarcaModelo" placeholder="Insira a marca e o modelo do veículo:">
+    <input type="text" name="" id="" data-js="inputAno" placeholder="Insira o ano do veículo:">
+    <input type="text" name="" id="" data-js="inputPlaca" placeholder="Insira a placa do veículo:">
+    <input type="text" name="" id="" data-js="inputCor" placeholder="Insira a cor do veículo:">
+    <button>Cadastrar</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Imagem</th>
+        <th>Marca/Modelo</th>
+        <th>Ano</th>
+        <th>Placa</th>
+        <th>Cor</th>
+      </tr>
+    </thead>
+    <tbody data-js="tableBody">
+
+    </tbody>
+
+  </table>
+
+  <script src="dom.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
