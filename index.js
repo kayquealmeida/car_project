@@ -48,6 +48,8 @@
         var $placaTd = doc.createElement('td');
         var $corTd = doc.createElement('td');
         var $img = doc.createElement('img');
+        var $removeButton = doc.createElement('button');
+        var $removeTd = doc.createElement('td');
 
         $img.setAttribute('src', $('[data-js="inputImg"]').get().value);
         $imageTd.appendChild($img);
@@ -56,14 +58,25 @@
         $placaTd.textContent = $('[data-js="inputPlaca"]').get().value;
         $corTd.textContent = $('[data-js="inputCor"]').get().value;
 
+        $removeButton.className = 'red';
+        $removeButton.textContent = 'Remover';
+        $removeTd.appendChild($removeButton);
+
         $tr.appendChild($imageTd);
         $tr.appendChild($marcaModeloTd);
         $tr.appendChild($anoTd);
         $tr.appendChild($placaTd);
         $tr.appendChild($corTd);
+        $tr.appendChild($removeTd);
+
+        $removeButton.addEventListener('click', app.removeItemFromTable);
 
         return $fragment.appendChild($tr);
 
+      },
+
+      removeItemFromTable: function removeItemFromTable() {
+        return this.parentNode.parentNode.remove();
       }
 
     };
